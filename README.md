@@ -50,23 +50,39 @@ DDL (Data Definition Language)
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 
 create database ejobs;
+
 create table jobs
+
 (
+
 id int not null auto_increment,
-numeJob varchar(20) not null,
+
+numeJob varchar(20) not null
+
 idTipJob int not null,
+
 idDomeniu int,
+
 idOras int,
+
 idNivelStudii int,
+
 idExperienta int,
+
 idSalariu int,
+
 primary key(id)
+
 );
 
 create table tipJob
+
 (
+
 id int not null auto_increment primary key,
+
 tipJob varchar(20)
+
 );
 
 create table domeniu
@@ -115,4 +131,48 @@ add foreign key (idTipJob) references tipjob(id);
 
 rename table jobs to joburi;
 
+DML (Data Manipulation Language)
 
+In order to be able to use the database I populated the tables with various data necessary in order to perform queries and manipulate the data. In the testing process, this necessary data is identified in the Test Design phase and created in the Test Implementation phase.
+
+Below you can find all the insert instructions that were created in the scope of this project:
+
+insert into joburi(numejob,idTipJob,idDomeniu,idOras,idNivelStudii,idExperienta,idSalariu) values
+('inginer de calcul',1,2,2,4,1,5),
+('asistent medical',4,3,4,2,3,3),
+('militar',1,4,6,2,4,4);
+
+insert into domeniu (id,domeniuJob) values
+(1,'Banca'),
+(2,'Inginerie'),
+(3,'Medicina'),
+(4,'Militar'),
+(5,'Constructii'),
+(6,'IT');
+
+insert into tipjob(id,tipJob) values
+(1,'full-time'),
+(2,'part-time'),
+(3,'internship'),#sters
+(4,'seasonal');
+
+insert into salariu(id,salariuJob) values
+(1,3000),
+(2,4500),
+(3,4800),
+(4,7500),
+(5,2600);
+
+insert into orase(id,oraseJob) values
+(1,'Arad'),
+(2,'Sibiu'),
+(3,'Alba'),
+(4,'Timisoara'),
+(5,'Targu Jiu'),
+(6,'Bucuresti');
+
+insert into nivelstudii(id,nivelStudiiJob) values
+(1,'necalif.'),
+(2,'calificat'),
+(3,'student'),
+(4,'absolvent');
