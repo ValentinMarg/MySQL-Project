@@ -77,7 +77,11 @@ In order to simulate various scenarios that might happen in real life I created 
 
 ![image](https://github.com/ValentinMarg/MySQL-Project/assets/162619749/e9afcbaf-ffa6-4c3e-b81e-f9f8ce46f914)                 ![image](https://github.com/ValentinMarg/MySQL-Project/assets/162619749/74b6ba1d-0d4a-413d-ad1f-126054c206b9)
 
+Conclusion
 
+  In this project, I have created tables that hold the necessary information for a database and that contain both IDs to identify the tables (city.id, salary.id) and their own information content (cities=Sibiu, Bucharest).
+I also created links between them with the help of primary and secondary keys that showed me their role in the communication between the tables.
+Following the creation of this database, I was able to observe and learn how the tables work between them and how the information is connected to each other.
 
 
 
